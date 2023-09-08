@@ -3,14 +3,14 @@ import Image from 'next/image'
 const works = [
     {
         id: 1,
-        background: "1.png",
+        background: "/works/bg/1.png",
         thumbnail: "1.png",
         name: "Rayu Motor",
         description: "AC Service Workshop that has implemented online registration to make it easier for consumers, mechanics, and sales",
         link: ""
     }, {
         id: 2,
-        background: "2.png",
+        background: "/works/bg/2.png",
         thumbnail: "2.png",
         name: "Jasabung",
         description: "Penjelasan",
@@ -27,7 +27,11 @@ export default function Works() {
                     {
                         works.map((item) => {
                             return (
-                                <div className={`bg-[url('/works/bg/${item.background}')] bg-no-repeat bg-cover flex-shrink-0 rounded-[14px] md:w-1/2 lg:w-[873px] lg:min-h-[520px] flex flex-col lg:flex-row gap-x-[20px] pl-4 pr-5 py-6 lg:pt-[95px] lg:pb-[96px] mb-4 md:mb-0`} key={item.id}>
+                                <div
+                                    className={`bg-no-repeat bg-cover flex-shrink-0 rounded-[14px] md:w-1/2 lg:w-[873px] lg:min-h-[520px] flex flex-col lg:flex-row gap-x-[20px] pl-4 pr-5 py-6 lg:pt-[95px] lg:pb-[96px] mb-4 md:mb-0`}
+                                    key={item.id}
+                                    style={{backgroundImage: `url(${item.background})`}}
+                                >
                                     <Image
                                         src={`/works/${item.thumbnail}`}
                                         width={557}
