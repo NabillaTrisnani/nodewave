@@ -31,6 +31,7 @@ export default function Testimony() {
                     slidesPerView={1}
                     spaceBetween={30}
                     freeMode={true}
+                    centeredSlides={true}
                     modules={[FreeMode]}
                     breakpoints={{
                         768: {
