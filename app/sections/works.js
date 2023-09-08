@@ -30,7 +30,6 @@ export default function Works() {
         <section className="works py-[50px]">
             <div className='container'>
                 <h1 className='text-center text-[32px] font-semibold leading-normal mb-[41px]'>Our Works</h1>
-                {/* <div className='md:flex md:overflow-x-auto md:gap-x-[30px]'> */}
                 <Swiper
                     slidesPerView={'auto'}
                     centeredSlides={true}
@@ -41,7 +40,7 @@ export default function Works() {
                             return (
                                 <SwiperSlide key={item.id}>
                                     <div
-                                        className={`bg-no-repeat bg-cover flex-shrink-0 rounded-[14px] md:w-1/2 lg:w-[873px] lg:min-h-[520px] flex flex-col lg:flex-row gap-x-[20px] pl-4 pr-5 py-6 lg:pt-[95px] lg:pb-[96px] mb-4 md:mb-0`}
+                                        className={`bg-no-repeat bg-cover lg:flex-shrink-0 rounded-[14px] lg:w-[873px] lg:min-h-[520px] flex flex-col lg:flex-row gap-x-[20px] pl-4 pr-5 py-6 lg:pt-[95px] lg:pb-[96px] mb-4 md:mb-0`}
                                         style={{ backgroundImage: `url(${item.background})` }}
                                     >
                                         <Image
@@ -62,7 +61,6 @@ export default function Works() {
                         })
                     }
                 </Swiper>
-                {/* </div> */}
             </div>
         </section>
     );
