@@ -22,13 +22,13 @@ function MobileNav({ open, setOpen }) {
                 </a>
             </div>
             <div className="flex flex-col ml-4">
-                <a className="text-md font-medium my-3" href="/about" onClick={() => setTimeout(() => { setOpen(!open) }, 100)}>
+                <a className="text-md font-medium my-3" href="#" onClick={() => setTimeout(() => { setOpen(!open) }, 100)}>
                     About
                 </a>
-                <a className="text-md font-normal my-3" href="/contact" onClick={() => setTimeout(() => { setOpen(!open) }, 100)}>
+                <a className="text-md font-normal my-3" href="#" onClick={() => setTimeout(() => { setOpen(!open) }, 100)}>
                     Contact
                 </a>
-                <a className="text-md font-normal my-3" href="/contact" onClick={() => setTimeout(() => { setOpen(!open) }, 100)}>
+                <a className="text-md font-normal my-3" href="#" onClick={() => setTimeout(() => { setOpen(!open) }, 100)}>
                     Portfolio
                 </a>
             </div>
@@ -40,7 +40,7 @@ export default function Navbar() {
     const [open, setOpen] = useState(false)
     return (
         <div className='container'>
-            <nav className="flex filter drop-shadow-md py-4 h-20 items-center">
+            <nav className="flex filter drop-shadow-md py-6 h-20 items-center">
                 <MobileNav open={open} setOpen={setOpen} />
                 <div className="w-3/12 flex items-center">
                     <a className="" href="/">
@@ -63,13 +63,13 @@ export default function Navbar() {
                     </div>
 
                     <div className="hidden lg:flex items-center gap gap-[30px]">
-                        <NavLink to="/contact">
+                        <NavLink to="#">
                             Website
                         </NavLink>
-                        <NavLink to="/about">
+                        <NavLink to="#">
                             Mobile Apps
                         </NavLink>
-                        <NavLink to="/about">
+                        <NavLink to="#">
                             Portfolio
                         </NavLink>
                         <button type="button" className="focus:outline-none text-white bg-primary focus:ring-4 focus:ring-green-300 font-medium text-xl px-5 py-2.8 rounded-full">Make an App</button>
